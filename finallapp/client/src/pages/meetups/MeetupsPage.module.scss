@@ -1,0 +1,49 @@
+@import '../../styles/colors';
+@import '../../styles/typography';
+
+.meetupsPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px;
+    width: 100%;
+}
+
+.tabs {
+    margin-bottom: 36px;
+    margin-top: 40px;
+}
+
+.selectedTabItem {
+    outline: none !important;
+    padding-bottom: 15px;
+    padding-left: 22px;
+    padding-right: 22px;
+    border-bottom: 2px solid $primary-purple;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $grey-800;
+}
+
+.loading {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    border: 2px solid transparent;
+    border-top: 2px solid $primary-purple;
+    animation: loading 1s infinite;
+    margin-top: 100px;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

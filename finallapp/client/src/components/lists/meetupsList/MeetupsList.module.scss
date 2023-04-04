@@ -1,0 +1,29 @@
+@import '../../../styles/colors';
+
+.listContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.meetups {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.suggested {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $grey-700;
+}

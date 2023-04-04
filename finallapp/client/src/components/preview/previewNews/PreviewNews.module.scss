@@ -1,0 +1,43 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/typography.scss';
+
+.block {
+    background-color: $white;
+    box-shadow: 0px 4px 7px rgba(215, 221, 232, 0.398055);
+    border-radius: 5px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    padding: 23px 25px 50px 25px;
+}
+
+.buttonsBlock {
+    @extend .block;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.photo {
+    width: 100%;
+}
+
+.photoSceleton {
+    @extend .photo;
+    height: 400px
+}
+
+.newsTitle {
+    @extend .additionalH2;
+    margin-bottom: 41px;
+}
+
+.newsText {
+    @extend .paragraph;
+}
+
+@media (max-width: 425px) {
+    .button {
+        padding: 12px 0;
+    }
+}

@@ -1,0 +1,64 @@
+@import '../../../../../styles/colors.scss';
+
+.form {
+    width: 550px; // todo: delete
+}
+
+.inputs {
+    padding: 40px;
+    margin: 0 0 24px 0;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: $white;
+    & > * {
+        margin: 0 0 20px 0;
+    }
+    :last-child {
+        margin: 0;
+    }
+}
+
+.dateInputs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dateInput {
+    width: 223px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 40px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: $white;
+}
+
+.textArea {
+    height: 100px;
+}
+
+.dateInput {
+    height: 38px;
+    transition-duration: 0.3s;
+    transition-property: border, background-color, color;
+    padding: 10px;
+    border: 1px solid $grey-300;
+    border-radius: 4px;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: $grey-800;
+    background-color: rgba($grey-100, 0.4);
+
+    outline: none;
+
+    &:focus {
+        border: 2px solid $primary-purple;
+    }
+}

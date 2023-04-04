@@ -1,0 +1,54 @@
+@import '../../../styles/colors';
+
+.input {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 100%;
+    transition-duration: 0.3s;
+    transition-property: border, background-color, color;
+    padding: 11px;
+    border: 1px solid $grey-300;
+    border-radius: 4px;
+    height: 40px;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: $grey-800;
+    background-color: rgba($grey-100, 0.4);
+
+    outline: none;
+
+    &::placeholder {
+        color: $grey-600;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    &:disabled {
+        background-color: $grey-200;
+        color: $grey-600;
+
+        &::placeholder {
+            color: $grey-600;
+        }
+    }
+
+    &.invalid {
+        border: 2px solid $red-300;
+    }
+
+    &.success {
+        border: 2px solid $light-green-300;
+    }
+
+    &:focus {
+        border: 2px solid $primary-purple;
+    }
+}

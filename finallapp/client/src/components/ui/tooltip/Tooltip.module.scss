@@ -1,0 +1,76 @@
+@import '../../../styles/colors.scss';
+
+%triangle {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -100%);
+}
+
+.tooltip {
+    position: relative;
+    max-width: 210px;
+    display: inline-block;
+    padding: 20px;
+    text-align: center;
+    border-radius: 3px;
+    color: $white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    &__caption {
+        display: block;
+        margin: 0 0 5px 0;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+    }
+}
+
+.primary {
+    @extend .tooltip;
+    background-color: $grey-700;
+    &::before {
+        @extend %triangle;
+        border-bottom-color: $grey-700;
+    }
+    &__caption {
+        @extend .tooltip__caption;
+    }
+}
+
+.secondary {
+    @extend .tooltip;
+    background-color: $primary-purple;
+    box-shadow: 0px 12px 22px rgba(51, 63, 82, 0.3);
+    &::before {
+        @extend %triangle;
+        border-bottom-color: $primary-purple;
+    }
+    &__caption {
+        @extend .tooltip__caption;
+    }
+}
+
+.default {
+    @extend .tooltip;
+    background-color: $white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    color: #a1abba;
+    &::before {
+        @extend %triangle;
+        border-bottom-color: $white;
+    }
+    &__caption {
+        @extend .tooltip__caption;
+        color: $grey-800;
+    }
+}

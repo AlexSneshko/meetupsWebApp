@@ -1,0 +1,46 @@
+@import '../../styles/colors.scss';
+@import '../../styles/typography.scss';
+
+.pageName {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: $grey-800;
+}
+
+.previewMeetupPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.title {
+    padding: 47px 0 49px 0;
+}
+
+.title > h1 {
+    @extend .basicH1;
+}
+
+.loading {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    border: 2px solid transparent;
+    border-top: 2px solid $primary-purple;
+    animation: loading 1s infinite;
+    align-self: center;
+    margin-top: 100px;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

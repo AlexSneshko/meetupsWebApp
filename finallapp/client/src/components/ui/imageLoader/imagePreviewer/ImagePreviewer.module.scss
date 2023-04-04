@@ -1,0 +1,67 @@
+@import '../../../../styles/colors';
+
+.label {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: $grey-500;
+    margin-bottom: 10px;
+}
+
+.previewer {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px dashed $grey-300;
+    border-radius: 4px;
+    padding: 12px 12px 12px 16px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.information {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+    margin-right: 33px;
+}
+
+.fileName {
+    font-size: 14px;
+    line-height: 16px;
+    color: $grey-800;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 163px;
+}
+
+.fileSize {
+    font-size: 10px;
+    line-height: 12px;
+    color: $grey-500;
+    margin-top: 4px;
+}
+
+.cancel {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 35px;
+    font-weight: 400;
+    color: #3c4861;
+    line-height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    transition: 0.3s all;
+
+    &:active {
+        transform: scale(0.8);
+    }
+}

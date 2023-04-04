@@ -1,0 +1,90 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/typography.scss';
+
+.textArea {
+    @extend .paragraph;
+    line-height: 20px;
+    color: $grey-700;
+    background-color: rgba($grey-100, 0.4);
+    border: 1px solid $grey-300;
+    border-radius: 5px;
+    resize: none;
+    outline: none;
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px 12px;
+
+    &.invalid {
+        border: 2px solid $red-300;
+    }
+
+    &.success {
+        border: 2px solid $light-green-300;
+    }
+
+    &:focus {
+        border: 2px solid $primary-purple;
+    }
+}
+
+.text {
+    margin-top: 4px;
+    height: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+    color: $grey-600;
+    display: flex;
+    align-items: center;
+
+    &.invalid {
+        color: $red-300;
+    }
+
+    &.success {
+        color: $light-green-300;
+    }
+
+    &.success:not(:empty)::before {
+        content: '';
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background-image: url('../../../assets/icons/success-icon.svg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin-right: 4px;
+    }
+
+    &.invalid:not(:empty)::before {
+        content: '';
+        display: inline-block;
+        width: 12.27px;
+        height: 12.27px;
+        background-image: url('../../../assets/icons/error-icon.svg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-right: 4px;
+    }
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name {
+    @extend .inputName;
+}
+
+.inputCount {
+    @extend .inputLength;
+}
+
+.inputMax {
+    @extend .inputLengthMax;
+}

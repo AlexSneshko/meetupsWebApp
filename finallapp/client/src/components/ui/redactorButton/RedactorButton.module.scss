@@ -1,0 +1,24 @@
+@import '../../../styles/colors.scss';
+
+.button {
+    border: none;
+    cursor: pointer;
+    background: none;
+
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+    box-sizing: border-box;
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+
+
+    &:active {
+        transform: scale(0.85);
+    }
+
+    &:hover {
+        background-color: $grey-100;
+    }
+}

@@ -1,0 +1,71 @@
+@import '../../../styles/colors.scss';
+
+.button {
+    border-radius: 5px;
+    min-width: 105px;
+    text-align: center;
+    font-size: 14px;
+    padding: 12px 35px;
+    transition: 0.2s all;
+    cursor: pointer;
+}
+
+.primary {
+    background: $primary-gradient;
+    color: $grey-100;
+    border: none;
+}
+
+.primary:not(:disabled):hover {
+    box-shadow: 0px 4px 8px rgba($grey-800, 0.3);
+}
+
+.primary:not(:disabled):active {
+    transition: none;
+    background: $primary-blue;
+    box-shadow: 0px 2px 3px rgba($grey-800, 0.2);
+}
+
+.primary:disabled {
+    opacity: 0.6;
+}
+
+.secondary {
+    background: #fff;
+    color: $primary-purple;
+    border: 1px solid $primary-purple;
+}
+
+.secondary:not(:disabled):hover {
+    background: rgba($primary-purple, 0.2);
+}
+
+.secondary:not(:disabled):active {
+    transition: none;
+    background: rgba($primary-purple, 0.4);
+}
+
+.secondary:disabled {
+    background: rgba($primary-purple, 0.4);
+    opacity: 0.6;
+}
+
+.default {
+    background: #fff;
+    color: $grey-600;
+    border: 1px solid $grey-300;
+}
+
+.default:not(:disabled):hover {
+    background: rgba($grey-600, 0.1);
+}
+
+.default:not(:disabled):active {
+    transition: none;
+    background: rgba($grey-600, 0.2);
+}
+
+.default:disabled {
+    background: rgba($grey-600, 0.2);
+    opacity: 0.6;
+}

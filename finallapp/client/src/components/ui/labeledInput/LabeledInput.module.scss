@@ -1,0 +1,76 @@
+@import '../../../styles/colors';
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 82px;
+    width: 100%;
+}
+
+.label {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: $grey-500;
+    margin-bottom: 10px;
+}
+
+.text {
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in-out;
+    animation-name: smoothAppear;
+    margin-top: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+    color: $grey-600;
+    display: flex;
+    align-items: center;
+
+    &.invalid {
+        color: $red-300;
+    }
+
+    &.success {
+        color: $light-green-300;
+    }
+
+    &.success::before {
+        content: '';
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background-image: url('../../../assets/icons/success-icon.svg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin-right: 4px;
+    }
+
+    &.invalid::before {
+        content: '';
+        display: inline-block;
+        width: 12.27px;
+        height: 12.27px;
+        background-image: url('../../../assets/icons/error-icon.svg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-right: 4px;
+    }
+}
+
+@keyframes smoothAppear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

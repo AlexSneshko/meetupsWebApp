@@ -1,0 +1,29 @@
+@import '../../styles/colors.scss';
+@import '../../styles/typography.scss';
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.customUserAvatar {
+    background: $primary-purple;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: $white;
+    cursor: default;
+    order: 1;
+}
+
+.usernameFirst {
+    order: 2;
+    margin-left: 10px;
+}
+
+.useravatarFirst {
+    order: 0;
+    margin-right: 10px;
+}

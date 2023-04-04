@@ -1,0 +1,179 @@
+@import '../../../../styles/colors.scss';
+
+.datePicker {
+    // display: flex;
+    position: absolute;
+    z-index: 1;
+    border: 1px solid #d5dce7;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    background: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #5b6887;
+    top: calc(100% - 12px);
+    &::after,
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 100%;
+        width: 0;
+        height: 0;
+        border-style: solid;
+    }
+    &::after {
+        top: -12px;
+        left: 196px;
+        border-color: transparent transparent #fff transparent;
+        border-width: 6px;
+    }
+    &::before {
+        top: -14px;
+        left: 195px;
+        border-color: transparent transparent #d5dce7 transparent;
+        border-width: 7px;
+    }
+}
+
+.date {
+    width: 218px;
+    padding: 15px;
+}
+
+.monthWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+.monthPrev,
+.monthNext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: $grey-100;
+    border: none;
+    cursor: pointer;
+    img {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+.month {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    color: #3c4861;
+}
+
+.weekDays {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 4px;
+    margin: 15px 0 9px 0;
+    border-top: 1px solid #d5dce7;
+    border-bottom: 1px solid #d5dce7;
+}
+
+.weekDay {
+    font-size: 11px;
+    color: #3c4861;
+}
+
+.day {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3.333px 0;
+}
+
+.dayNum {
+    input {
+        display: none;
+    }
+
+    input:checked + label {
+        background: $primary-gradient;
+        color: $white;
+    }
+
+    input:disabled + label {
+        color: $grey-200;
+    }
+
+    label {
+        display: block;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        cursor: pointer;
+        &:hover {
+            background-color: $grey-100;
+        }
+    }
+}
+
+.timePicker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 1px solid $grey-300;
+}
+
+.timeCaption {
+    padding: 17.5px 36px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #3c4861;
+    border-bottom: 1px solid #d5dce7;
+}
+
+.times {
+    max-height: 218px;
+    overflow: overlay;
+    border-bottom-right-radius: 4px;
+    &::-webkit-scrollbar {
+        width: 18px;
+    }
+    &::-webkit-scrollbar-track {
+        background: none;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #e2e7ef;
+        border: 6px solid rgba(0, 0, 0, 0);
+        border-radius: 10px;
+        background-clip: padding-box;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: $grey-500;
+    }
+}
+
+.time {
+    &:hover {
+        background-color: $grey-100;
+    }
+    input {
+        display: none;
+    }
+    input:checked + label {
+        background: $primary-gradient;
+        color: $white;
+    }
+    label {
+        display: block;
+        padding: 8px 46px;
+        cursor: pointer;
+    }
+}

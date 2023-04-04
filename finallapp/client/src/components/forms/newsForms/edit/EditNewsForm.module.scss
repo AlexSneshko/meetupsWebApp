@@ -1,0 +1,65 @@
+@import '../../../../styles/colors.scss';
+@import '../../../../styles/typography.scss';
+
+.form {
+    width: 100%;
+}
+
+.block {
+    background-color: $white;
+    box-shadow: 0px 6px 12px #E2E7EF;
+    border-radius: 5px;
+}
+
+.infoBlock {
+    @extend .block;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-bottom: 24px;
+}
+
+.imageText {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    color: $grey-500;
+    margin-bottom: 10px
+}
+
+.buttonsBlock {
+    @extend .block;
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.textarea {
+    resize: vertical;
+    height: 200px;
+    margin-bottom: -5px;
+}
+
+.button:last-child {
+    margin-left: 9px;
+}
+
+@media (max-width: 550px) {
+    .button {
+        padding: 12px 12px;
+    }
+}
+
+@media (max-width: 460px) { 
+    .buttonsBlock {
+        flex-direction: column-reverse;
+        gap: 15px;
+    }
+
+    .rightButtons {
+        display: flex;
+        justify-content: space-between;
+    }
+}

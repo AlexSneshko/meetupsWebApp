@@ -1,0 +1,53 @@
+@import '../../../styles/colors';
+
+.steps {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    opacity: 0.6;
+    padding-left: 32px;
+    padding-right: 32px;
+    border-bottom: 1px solid $grey-200;
+    padding-bottom: 15px;
+    cursor: pointer;
+    user-select: none;
+
+    &.current {
+        opacity: 1;
+        border-bottom-color: $primary-blue;
+        border-bottom-width: 2px;
+    }
+}
+
+.name {
+    color: $grey-800;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.number {
+    display: inline-flex;
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $primary-blue;
+    border-radius: 50%;
+    color: #ffffff;
+}

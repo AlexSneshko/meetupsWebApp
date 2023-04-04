@@ -1,0 +1,12 @@
+@import '../../styles/typography.scss';
+
+.editMeetupPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.title {
+    padding: 47px 0 49px 0;
+}

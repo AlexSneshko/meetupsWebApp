@@ -1,0 +1,88 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/typography.scss';
+
+.meetupCard {
+    background-color: $white;
+    box-shadow: 0px 4px 9px rgba($grey-400, 0.25);
+    border-radius: 6px;
+    padding: 18px 16px 22px 14px;
+    transition: 0.5s;
+
+    &:hover {
+        box-shadow: 0px 4px 8px rgba($grey-800, 0.3);
+        cursor: pointer;
+    }
+}
+
+.authorInfo {
+    display: flex;
+    align-items: center;
+    @extend .paragraph;
+    color: $grey-700;
+}
+
+.topLine {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.editCard {
+    display: flex;
+    align-items: center;
+}
+
+.editButton {
+    margin-left: 35px;
+}
+
+.meetupDateInfo {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $grey-700;
+}
+
+.meetupInfo {
+    margin-bottom: 20px;
+}
+
+.meetupSubject {
+    margin-bottom: 5px;
+    @extend .basicH3;
+}
+
+.meetupExcerpt {
+    @extend .paragraph;
+    color: $grey-600;
+}
+
+.bottomLine {
+    display: flex;
+    align-items: center;
+}
+
+.supportInfo {
+    margin-left: 10px;
+    @extend .paragraph;
+    color: $grey-500;
+}
+
+.userAvatar {
+    height: 30px;
+    width: 30px;
+}
+
+.userName {
+    font-weight: 400;
+    font-size: 14px;
+    color: #5b6887;
+}
+
+@media (max-width: 640px) {
+    .editButton {
+        margin-left: 0;
+    }
+}

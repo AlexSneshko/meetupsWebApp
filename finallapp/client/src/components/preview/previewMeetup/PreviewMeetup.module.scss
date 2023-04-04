@@ -1,0 +1,149 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/typography.scss';
+
+.block {
+    background-color: $white;
+    box-shadow: 0px 4px 7px rgba(215, 221, 232, 0.398055);
+    border-radius: 5px;
+}
+
+.blockName {
+    @extend .inputName;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.meetupName {
+    @extend .block;
+    padding: 26px 29px 30px 24px;
+}
+
+.meetupNameText {
+    @extend .additionalH2;
+}
+
+.meetupsTimePlace {
+    @extend .block;
+    padding: 21px 23px 11px 23px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 15px;
+    color: $grey-800;
+}
+
+.timePlaceLine {
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+.timePlaceIcon {
+    margin-right: 16px;
+}
+
+.authorBlock {
+    @extend .block;
+    @extend .pageLink_active;
+    color: $grey-800;
+    padding: 15px 16px 17px 23px;
+    margin-top: 5px;
+    margin-bottom: 19px;
+}
+
+.supportBlock {
+    @extend .block;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+.excerptBlock {
+    @extend .block;
+    @extend .pageLink;
+    color: $grey-800;
+    padding: 22px 63px 18px 23px;
+    margin-top: 5px;
+    margin-bottom: 19px;
+}
+
+.noSupports {
+    @extend .pageLink;
+    color: $grey-800;
+    padding: 22px 63px 18px 23px;
+    margin-top: 5px;
+}
+
+.votedUsersBlock {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 17px 23px 15px 17px;
+    flex-wrap: wrap;
+}
+
+.voteSection {
+    display: flex;
+    justify-content: right;
+    padding: 8px 24px;
+}
+
+.userAvatar {
+    width: 30px;
+    height: 30px;
+}
+
+.votedUserAvatar {
+    width: 48px;
+    height: 48px;
+}
+
+.buttonsBlock {
+    @extend .block;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.meetupImage {
+    width: 100%;
+}
+
+.skeletonImage {
+    @extend .meetupImage;
+    height: 400px;
+}
+
+.usersCount {
+    color: $white;
+    background-color: $grey-500;
+    border-radius: 100%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button:last-child {
+    margin-left: 9px;
+}
+
+@media (max-width: 550px) {
+    .button {
+        padding: 12px 12px;
+    }
+}
+
+@media (max-width: 460px) {
+    .buttonsBlock {
+        flex-direction: column-reverse;
+        gap: 15px;
+        padding: 16px 20px;
+    }
+
+    .rightButtons {
+        display: flex;
+        justify-content: space-between;
+    }
+}

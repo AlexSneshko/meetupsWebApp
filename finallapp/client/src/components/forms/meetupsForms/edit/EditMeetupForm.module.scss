@@ -1,0 +1,99 @@
+@import '../../../../styles/colors.scss';
+@import '../../../../styles/typography.scss';
+
+.form {
+    width: 100%;
+}
+
+.inputs {
+    padding: 40px;
+    margin: 0 0 24px 0;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: $white;
+}
+
+.theme,
+.place,
+.speaker {
+    margin: 0 0 8px 0;
+}
+
+.photo {
+    margin-bottom: 15px;
+}
+
+.dates {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.dateInput {
+    width: 200px
+}
+
+.caption {
+    @extend .paragraph;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    line-height: 16px;
+    color: $grey-500;
+}
+
+.textarea {
+    height: 473px;
+    margin-bottom: -5px;
+}
+
+.buttonsBlock {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 40px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: $white;
+}
+
+.previewButton {
+    padding: 12px 25px;
+    margin-right: 15px;
+}
+
+.button:last-child {
+    margin-left: 9px;
+}
+
+@media (max-width: 550px) {
+    .button {
+        padding: 12px 12px;
+    }
+
+    .dates {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .dateInput {
+        width: 100%;
+    }
+}
+
+@media (max-width: 460px) { 
+    .buttonsBlock {
+        flex-direction: column-reverse;
+        gap: 15px;
+        padding: 16px 20px;
+    }
+
+    .rightButtons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .button {
+        padding: 12px 0;
+    }
+}

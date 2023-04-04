@@ -1,0 +1,46 @@
+@import '../../../styles/colors.scss';
+
+.dateInput {
+    position: relative;
+}
+
+.label {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: $grey-500;
+    margin-bottom: 10px;
+}
+
+.inputWrapper {
+    position: relative;
+}
+
+.input {
+    cursor: pointer;
+    &:focus + .calendarImg path {
+        fill: $primary-purple;
+    }
+}
+
+.calendarImg {
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 100%;
+    top: 0;
+    transform: translate(-140%, 200%);
+    pointer-events: none;
+}
+
+.visible {
+    display: flex;
+}
+
+.invisible {
+    display: none;
+}

@@ -1,0 +1,11 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/typography.scss';
+
+.signInButton {
+    background-color: transparent;
+    border: none;
+    padding: 12px 15px;
+    @extend .paragraph;
+    color: $white;
+    cursor: pointer;
+}

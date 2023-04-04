@@ -1,0 +1,16 @@
+.newsList {
+    width: 100%;
+}
+
+.firstLine {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+    width: 100%;
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}

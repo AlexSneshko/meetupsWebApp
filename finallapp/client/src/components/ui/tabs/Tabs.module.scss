@@ -1,0 +1,44 @@
+@import '../../../styles/colors.scss';
+
+.tabsNav {
+    width: 100%;
+}
+
+.tabs {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tabItem {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    color: #979797;
+    cursor: pointer;
+    outline: none;
+    padding-bottom: 14px;
+    border-bottom: $grey-200 solid 1px;
+    padding-top: 15px;
+
+    &.active {
+        color: #3C4861;
+        font-weight: 600;
+        border-bottom: $primary-purple solid 2px;
+        padding-bottom: 13px;
+    } 
+}
+
+@media (max-width: 500px) {
+    .tabs {
+        height: 60px;
+    }
+
+    .tabItem {
+        font-size: 14px;
+    }
+}
